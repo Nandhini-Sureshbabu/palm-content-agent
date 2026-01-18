@@ -96,8 +96,7 @@ with col2:
 def generate_caption(topic, tone, max_length, api_key):
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-pro')
-        
+        model = genai.GenerativeModel('gemini-1.5-flash')        
         prompt = f"""Create a {tone.lower()} social media caption about "{topic}" for the palm industry. 
         The caption should be engaging, informative, and suitable for platforms like Instagram or LinkedIn.
         Maximum length: {max_length} words.
